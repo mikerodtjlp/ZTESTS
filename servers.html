@@ -1,0 +1,236 @@
+<!DOCTYPE html><html><head>
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<title>Pacific system</title>
+<style type="text/css">
+.sel1 {background-color: #c6d6e2;font-family: 'Arial';font-size: 11px;}
+.sel0 {background-color: #efefef;font-family: 'Arial';font-size: 11px;}
+.site {font-family: arial;font-size: 12px;background-color: #aec6cf;height: 22px;}
+.online {background-color: #77dd77;color: white; /*font-weight:bold;*/border-radius: 4px;}
+.offline {background-color: #ff6961;color: white; /*font-weight:bold;*/border-radius: 4px;}
+.comms { /*background-color:#fdfd96;color:black;border-radius:4px;*/}
+.man {font-family: arial;font-size: 12px;}
+.valign {vertical-align: text-bottom;}
+.grow {width: 40%;}
+hr {background-color: #ccc;height: 1px;border: 0;}</style></head>
+<body>
+<label style="position:absolute;top:12px; left:10px;color:gray; font-family:Consolas;font-size:10px;">COROMUEL</label><br />
+<div><img alt="" height="46" src="/files/bitmaps/company.png" width="48" /></div>
+<canvas id="myCanvas" width="300" height="70" style="position: absolute; top: 8px; left: 60px;">
+Your browser does not support the HTML5 canvas tag.
+</canvas><br />
+<div align="center">
+<img alt="" height="80px" width="100%" src="/web/header.jpg" style="box-shadow: 0px 3px 16px 0px rgb(64,64,64);">
+</div><div><br />
+<table width="100%"><tr>
+<td style="font-family:verdana;font-size:16px;text-shadow: 0px 1px 1px black;">Pacific available servers</td>
+<td align="right"><a style="font-family:Arial;font-size:12px;" href="http://50.21.179.57:80">online help</a></td>
+<td align="right"><a style="font-family:Arial;font-size:12px;" href="http://helpdesk/" target="_blank">help desk</a></td>
+</table><hr />
+<table>
+<tr class="site">
+<td style="width:60px;">System</td>
+<td style="width:110px">Description</td>
+<td style="width:100px">Server</td>
+<td style="width:30px">Cmp</td>
+<td style="width:140px">Comments</td>
+<td style="width:56px">status</td>
+<td class="grow"></td>
+</tr>
+<tr class="sel1">
+<td><img class="valign" alt="" src="/files/bitmaps/mroPR.ico"><a> PRD</a></td>
+<td><a href="link" onclick="go('50.21.179.57:80','2','1');return false">Coromuel Software</a></td>
+<td><a>50.21.179.57:80</a></td>
+<td><a>002</a></td>
+<td class="comms"><a>Production one</a></td>
+<td class="online"><img class="valign" alt="" src="/files/bitmaps/good.bmp"><a> online</a></td>
+<td><a></a></td>
+</tr>
+<tr class="sel0">
+<td><img class="valign" alt="" src="/files/bitmaps/mroPR.ico"><a> PRD</a></td>
+<td><a href="link" onclick="go('50.21.179.57:80','21','1');return false">Dental Sonora</a></td>
+<td><a>50.21.179.57:80</a></td>
+<td><a>021</a></td>
+<td class="comms"><a>Production two</a></td>
+<td class="online"><img class="valign" alt="" src="/files/bitmaps/good.bmp"><a> online</a></td>
+<td><a></a></td>
+</tr>
+<tr class="sel1">
+<td><img class="valign" alt="" src="/files/bitmaps/mroQA.ico"><a> PRD</a></td>
+<td><a href="link" onclick="go('50.21.179.57:80','16','1');return false">Laboratorio del Carmen</a></td>
+<td><a>50.21.179.57:80</a></td>
+<td><a>016</a></td>
+<td class="comms"><a>Laboratorio del Carmen</a></td>
+<td class="online"><img class="valign" alt="" src="/files/bitmaps/good.bmp"><a> online</a></td>
+<td><a></a></td>
+</tr>
+<tr class="sel0">
+<td><img class="valign" alt="" src="/files/bitmaps/mroQA.ico"><a> QA2</a></td>
+<td><a href="link" onclick="go('50.21.179.57:80','206','1');return false">Fotos Miguel</a></td>
+<td><a>50.21.179.57:80</a></td>
+<td><a>206</a></td>
+<td class="comms"><a>Fotos Miguel</a></td>
+<td class="online"><img class="valign" alt="" src="/files/bitmaps/good.bmp"><a> online</a></td>
+<td><a></a></td>
+<tr class="sel1">
+<td><img class="valign" alt="" src="/files/bitmaps/mroQA.ico"><a> PRD</a></td>
+<td><a href="link" onclick="wo('50.21.179.57:80/pages/orderentry.html','006');return false">Order Entry</a></td>
+<td><a>50.21.179.57:80</a></td>
+<td><a>006</a></td>
+<td class="comms"><a>Order Entry</a></td>
+<td class="online"><img class="valign" alt="" src="/files/bitmaps/good.bmp"><a> online</a></td>
+<td><a></a></td>
+</tr>
+<tr class="sel0">
+<td><img class="valign" alt="" src="/files/bitmaps/mroDE.ico"><a> DE1</a></td>
+<td><a href="link" onclick="go('50.21.179.57:80','32','1');return false">Colegio Eztrella</a></td>
+<td><a>50.21.179.57:80</a></td>
+<td><a>032</a></td>
+<td class="comms"><a>Production</a></td>
+<td class="online"><img class="valign" alt="" src="/files/bitmaps/good.bmp"><a> online</a></td>
+<td><a></a></td>
+</tr>
+<tr class="sel1">
+<td><img class="valign" alt="" src="/files/bitmaps/mroDE.ico"><a> BET</a></td>
+<td><a href="link" onclick="go('50.21.179.57:80','999','1');return false">BETA Production</a></td>
+<td><a>50.21.179.57:80</a></td>
+<td><a>999</a></td>
+<td class="comms"><a>Server development</a></td>
+<td class="offline"><img class="valign" alt="" src="/files/bitmaps/bad.bmp"><a> offline</a></td>
+<td><a></a></td>
+</tr>
+<tr class="sel0">
+<td><img class="valign" alt="" src="/files/bitmaps/mroLO.ico"><a> LOC</a></td>
+<td><a href="link" onclick="go('localhost:7000','','');return false">Local Pacific</a></td>
+<td><a>localhost:7000</a></td>
+<td><a>000</a></td>
+<td class="comms"><a>Local Development</a></td>
+<td class="offline"><img class="valign" alt="" src="/files/bitmaps/warning.bmp"><a> down</a></td>
+<td><a></a></td>
+</tr>
+<tr class="sel1">
+<td><img class="valign" alt="" src="/files/bitmaps/mroLO.ico"><a> LOC</a></td>
+<td><a href="link" onclick="go('localhost:7000','0','1');return false">Local Client</a></td>
+<td><a>localhost:7000</a></td>
+<td><a>000</a></td>
+<td class="comms"><a>Local Development</a></td>
+<td class="offline"><img class="valign" alt="" src="/files/bitmaps/warning.bmp"><a> down</a></td>
+<td><a></a></td>
+</tr>
+<tr class="sel0">
+<td><img class="valign" alt="" src="/files/bitmaps/mroLO.ico"><a> LOC</a></td>
+<td><a href="link" onclick="go('localhost:7000','0','2');return false">Local Operation</a></td>
+<td><a>localhost:7000</a></td>
+<td><a>000</a></td>
+<td class="comms"><a>Local Development</a></td>
+<td class="offline"><img class="valign" alt="" src="/files/bitmaps/warning.bmp"><a> down</a></td>
+<td><a></a></td>
+</tr>
+<tr class="sel1">
+<td><img class="valign" alt="" src="/files/bitmaps/mroLO.ico"><a> LOC</a></td>
+<td><a href="link" onclick="go('localhost:7000','0','3');return false">Customer</a></td>
+<td><a>localhost:7000</a></td>
+<td><a>000</a></td>
+<td class="comms"><a>Development</a></td>
+<td class="offline"><img class="valign" alt="" src="/files/bitmaps/warning.bmp"><a> down</a></td>
+<td><a></a></td>
+</tr>
+<tr class="sel0">
+<td><img class="valign" alt="" src="/files/bitmaps/mroPR.ico"><a> PRD</a></td>
+<td><a href="link" onclick="go('50.21.179.57:80','','');return false">Pacific</a></td>
+<td><a>50.21.179.57:80</a></td>
+<td><a>002</a></td>
+<td class="comms"><a>Production</a></td>
+<td class="offline"><img class="valign" alt="" src="/files/bitmaps/warning.bmp"><a> down</a></td>
+<td><a></a></td>
+</tr>
+<tr class="sel1">
+<td><img class="valign" alt="" src="/files/bitmaps/mroPR.ico"><a> PRD</a></td>
+<td><a href="link" onclick="go('50.21.179.57:80','2','1');return false">Entrepreneur</a></td>
+<td><a>50.21.179.57:80</a></td>
+<td><a>002</a></td>
+<td class="comms"><a>Production</a></td>
+<td class="offline"><img class="valign" alt="" src="/files/bitmaps/warning.bmp"><a> down</a></td>
+<td><a></a></td>
+</tr>
+<tr class="sel0">
+<td><img class="valign" alt="" src="/files/bitmaps/mroPR.ico"><a> PRD</a></td>
+<td><a href="link" onclick="go('50.21.179.57:80','2','2');return false">Operation</a></td>
+<td><a>50.21.179.57:80</a></td>
+<td><a>002</a></td>
+<td class="comms"><a>Production</a></td>
+<td class="offline"><img class="valign" alt="" src="/files/bitmaps/warning.bmp"><a> down</a></td>
+<td><a></a></td>
+</tr>
+<tr class="sel1">
+<td><img class="valign" alt="" src="/files/bitmaps/mroPR.ico"><a> PRD</a></td>
+<td><a href="link" onclick="go('50.21.179.57:80','2','3');return false">Customer</a></td>
+<td><a>50.21.179.57:80</a></td>
+<td><a>002</a></td>
+<td class="comms"><a>Production</a></td>
+<td class="offline"><img class="valign" alt="" src="/files/bitmaps/warning.bmp"><a> down</a></td>
+<td><a></a></td>
+</tr>
+<tr class="sel0">
+<td><img class="valign" alt="" src="/files/bitmaps/mroQA.ico"><a> QAS</a></td>
+<td><a href="link" onclick="go('50.21.179.57:90','','');return false">Pacific</a></td>
+<td><a>50.21.179.57:90</a></td>
+<td><a>002</a></td>
+<td class="comms"><a>Quality</a></td>
+<td class="offline"><img class="valign" alt="" src="/files/bitmaps/warning.bmp"><a> down</a></td>
+<td><a></a></td>
+</tr>
+<tr class="sel1">
+<td><img class="valign" alt="" src="/files/bitmaps/mroQA.ico"><a> QAS</a></td>
+<td><a href="link" onclick="go('50.21.179.57:90','2','1');return false">Entrepreneur</a></td>
+<td><a>50.21.179.57:90</a></td>
+<td><a>002</a></td>
+<td class="comms"><a>Quality</a></td>
+<td class="offline"><img class="valign" alt="" src="/files/bitmaps/warning.bmp"><a> down</a></td>
+<td><a></a></td>
+</tr>
+<tr class="sel0">
+<td><img class="valign" alt="" src="/files/bitmaps/mroQA.ico"><a> QAS</a></td>
+<td><a href="link" onclick="go('50.21.179.57:90','2','2');return false">Operation</a></td>
+<td><a>50.21.179.57:90</a></td>
+<td><a>002</a></td>
+<td class="comms"><a>Quality</a></td>
+<td class="offline"><img class="valign" alt="" src="/files/bitmaps/warning.bmp"><a> down</a></td>
+<td><a></a></td>
+</tr>
+<tr class="sel1">
+<td><img class="valign" alt="" src="/files/bitmaps/mroQA.ico"><a> QAS</a></td>
+<td><a href="link" onclick="go('50.21.179.57:90','2','3');return false">Customer</a></td>
+<td><a>50.21.179.57:90</a></td>
+<td><a>002</a></td>
+<td class="comms"><a>Quality</a></td>
+<td class="offline"><img class="valign" alt="" src="/files/bitmaps/warning.bmp"><a> down</a></td>
+<td><a></a></td>
+</tr>
+</table>
+</div>
+<div style="position:absolute;bottom:16px;height:30px;width:97%;"><hr />
+<center><a style="font-family:arial;font-size:smaller; color:gray;"
+href="mailto:mikerodtjlp@gmail.com.com">contact: customer service</a></center></div>
+<script type="text/javascript">
+let go = (s, c, e) => { window.open('http://' + s + '/web/mro.html?c=' + c + '&e='+e, "_blank", "");}
+let wo = s => { window.open('http://' + s); }
+let onload = () => {
+    let d = window.document
+    let l = d.createElement('link')
+    l.type = 'image/x-icon'
+    l.rel = 'shortcut icon'
+    l.href = '/files/bitmaps/mrosys.ico'
+    d.getElementsByTagName('head')[0].appendChild(l);
+}
+let $2 = a => document.getElementById(a);
+let z = $2("myCanvas").getContext("2d");
+z.fillStyle = "#255f8d";
+//z.fillRect(0, 0, 20, 62);
+z.font = "20px Arial";
+z.fillText("Pacific Framework", 5, 40);
+z.font = "10px Arial";
+z.fillText("MRO System", 5, 55);
+z.stroke();
+</script>
+</body>
+</html>
