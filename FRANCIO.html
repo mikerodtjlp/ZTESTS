@@ -1,332 +1,66 @@
 <!DOCTYPE html>
-<!-- saved from url=(0038)http://coromuel.mx/ztests/francio.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-   <link id="customcss" rel="stylesheet" type="text/css" href="./francio_files/FRANCIO.css">
+<html>
+<head>
+   <link id="customcss" rel="stylesheet" type="text/css" href="../ZTESTS/MIKE.css">
    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-   
-<script id="extra.js" type="text/javascript" src="./francio_files/extra.js.download" defer=""></script><script id="tre.js" type="text/javascript">var TRE = {tree0:{state:[]},tree1:{state:[]},to:0};
-TRE._fns = (c, p0, p1) => {
-  let f = TRE[c], r = typeof f === 'function';
-  if (r) f(p0, p1);
-  return r;
-}
-TRE.goto = (code, act, prms) => {
-  MRO.do_gototrans(MRO, MRO.make(
-    '{"gototrans":"' + code +
-    '","function":"' + act +
-    '","params":' + prms + '}'))
-  if (window.event) event.cancelBubble = true;
-  //else e.stopPropagation();
-  return false;
-}
-TRE.refresh = (a, p) => {
-  if (p && p !== '') MRO.show_result(new pairs(p));
-  MRO.send(a);
-  if (window.event) event.cancelBubble = true;
-  return false;
-}
-$3 = (c,f) => {
-  let _={},elms=document.getElementById(c).getElementsByTagName("*");
-  for(let i=0,n=elms.length;i<n;++i)if(elms[i].id===f){_=elms[i];break;}
-  return _;
-}
-TRE.get_state = a => TRE[a].state;
-TRE.get_tree = a => { return MRO.are_in(DFS.ZTHOME) ? $3('dform', a) : $2(a); }
-TRE.toggle = () => {
-  let li = window.event.currentTarget;
-  let ul = li.getElementsByTagName("ul")[0];
-  if(ul){
-    let img = li.getElementsByTagName("img");
-    let i=img[0],f=img[1],a=CNS.imgs;
-    let open = ul.style.display === "block";
-    MRO.display(ul.style, open ? 0:1);
-    if(f)f.src=a.concat(open?'sapfolderclose.png':'sapfolderopen.png');
-    i.src=a.concat(open?'sapright.png':'sapdown.png');
-    ul.open=!open;
-  }
-  if(window.event)event.cancelBubble=true;
-  else e.stopPropagation();
-  return false;
-}
-TRE.TREEIA = p => {
-  let id = p.get('id');
-  let mt = TRE.get_state(id), ul = TRE.get_tree(id).getElementsByTagName("ul");
-  if(mt.length<1)return;//first no process
-  for(let i=0,n=ul.length;i<n;++i)
-  if(mt[i]){
-    let u=ul[i];
-    u.open=true;
-    u.style.display="block";
-  }
-  $2('dform').scrollTop = TRE.to;
-}
-TRE.TREEIS = p => {
-  let id = p.get('id');
-  let u = TRE.get_tree(id).getElementsByTagName("ul");
-  let n = u.length, mt = TRE.get_state(id);
-  if (mt.length !== n) mt.length = n;
-  for (let i=0; i<n; ++i) mt[i] = u[i].open;
-  TRE.to = $2('dform').scrollTop;
-}
-TRE.TREEIE = (p,l) => {TRE.proc_tr(true,'block',p,l);}
-TRE.TREEIC = (p,l) => {TRE.proc_tr(false,'none',p,l);}
-TRE.proc_tr = (o, s, p, l) => {
-  let ims=CNS.imgs;
-  let spo=ims.concat('sapfolderopen.png');
-  let sad=ims.concat('sapdown.png');
-  let spc=ims.concat('sapfolderclose.png');
-  let sar=ims.concat('sapright.png');
-  let a = TRE.get_tree(p.get('id')).getElementsByTagName("ul");
-  let n = a.length;
-  let brk = l === undefined || l === null ? n : l;
-  for(let i=0;i<n;++i){
-    let u=a[i];
-    u.open=o;
-    u.style.display=s;
-    let z=u.previousSibling; // img
-    let b=z.previousSibling; // text
-    let c=b.previousSibling; // folder
-    let d=c.previousSibling; // open/close
-    if(o){c.src=spo;d.src=sad;}
-    c.src = spc;
-    d.src = sar;
-    if (i === brk) break;
-  }
-}
-TRE.LODTRE = p => { MRO.load_tree(p); }</script><script id="bar.js" type="text/javascript" src="./francio_files/bar.js.download" defer=""></script><script id="ftr.js" type="text/javascript" src="./francio_files/ftr.js.download" defer=""></script><script id="lst.js" type="text/javascript" src="./francio_files/lst.js.download" defer=""></script><link type="image/x-icon" rel="shortcut icon" href="http://coromuel.mx/files/bitmaps/mro.ico"><script id="prf.js" type="text/javascript">var PRF = {};
-PRF.susrinf = () => {
-  if (!MRO.clie.isactive()) return;
-  let a = $2('prof'), b = a.style;
-  if (b.display === 'none') {
-    let t = $2('photo').getBoundingClientRect();
-    b.top = t.bottom + 'px';
-    b.left = t.right + 'px';
-    b.width = '400px';
-    b.height = '250px';
-    b.removeProperty('overflow');
-    b.removeProperty('background');
-    b.removeProperty('border');
-    MRO.load_html('USRPRF');
-  }
-  else MRO.display(b, 0);
-};
-(function(){
-  let d=window.document,css=d.createElement("style");
-  css.type="text/css";
-  css.innerHTML='#profhbg{'.concat(
-  'width:400px;',
-  'height:120px;',
-  'border-radius:4px 4px 0px 0px;}',
-  '#profhim{',
-  'position:absolute;',
-  'top:80px;',
-  'left:10px;',
-  'width:90px;',
-  'height:98px;',
-  'border-radius:4px;',
-  'border-width:10px;',
-  'border:solid;',
-  'border-color:#DDDDDD;}',
-  '#profb{font-size:12px;}',
-  '#proff{',
-  'border:1px solid #AAAAAA;',
-  'width:399px;',
-  'height:35px;',
-  'background-color:rgb(220,220,202);',
-  'font-size:10px;}',
-  '.pb{position:relative;left:120px;margin:6px;}',
-  '.pf{position:relative;top:10px;}');
-  d.body.appendChild(css);
-})();
-</script></head>
-<body style="display: inline; cursor: default;">
+   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+</head>
+<body style="display:none">
    <div id="aphdr"></div>
-   <div id="menu"><div class="menuBar" style="width:100%;"><a class="menuButton" onclick="execmd(&#39;help&#39;);">Help</a></div></div>
-   <div class="svg-wrapper"><svg height="60" width="320" xmlns="http://www.w3.org/2000/svg"><rect class="shape" height="60" width="320"></rect></svg><div class="text">Coromuel</div></div><div id="menupop" style="display: none;"></div>
+   <div id="menu"></div>
+   <div id="menupop"></div>
    <div id="stdbtns">
-      <img alt="" id="lgimg" src="./francio_files/company.png">
+      <img alt="" id="lgimg" src="" >
       <input id="tit" tabindex="-1" readonly="readonly" disabled="disabled" size="24">
       <input id="usrid" tabindex="-1" readonly="readonly" disabled="disabled" size="32">
       <input id="sess" tabindex="-1" readonly="readonly" disabled="disabled" size="16">
    </div>
-   <div id="inpbar" style="display: none;">
-      <div id="bok_" title="Enter" style="background: url(&quot;/files/bitmaps/mrostdbar.png&quot;) 0px 0px no-repeat;"></div>
+   <div id="inpbar">
+      <div id="bok_"></div>
       <input id="command" placeholder=" code..." maxlength="64" size="24" tabindex="-1">
-      <div id="bhis" title="Favorites" style="background: url(&quot;/files/bitmaps/mrostdbar.png&quot;) -16px 0px no-repeat;"></div>
+      <div id="bhis"></div>
    </div>
-   <div id="thdr"><input class="mrotitleid" id="titleid" maxlength="80" size="80" value=" Powered by Pacific framework" tabindex="-1" readonly="true" disabled="disabled" style="position:absolute;left:0px;top:2px;width:100%;"><input class="mrotitle" id="transbar" maxlength="80" size="80" value="" tabindex="-1" readonly="true" disabled="disabled" style="position:absolute;left:0px;top:27px;height:26px;z-index:-1;width:100%;"><div id="inhdr" style="position:absolute;left:5px;top:32px;"></div></div>
-   <div id="cmdbar" style="display: none;">
-      <div id="bbck" title="Back" style="background: url(&quot;/files/bitmaps/mrostdbar.png&quot;) -32px 0px no-repeat;"></div>
-      <div id="bout" title="Out" style="background: url(&quot;/files/bitmaps/mrostdbar.png&quot;) -48px 0px no-repeat;"></div>
-      <div id="bhom" title="Home" style="background: url(&quot;/files/bitmaps/mrostdbar.png&quot;) -64px 0px no-repeat;"></div>
-      <div id="bfrw" title="Forward" style="background: url(&quot;/files/bitmaps/mrostdbar.png&quot;) -80px 0px no-repeat;"></div>
-      <div id="bnwa" title="New session" style="background: url(&quot;/files/bitmaps/mrostdbar.png&quot;) -112px 0px no-repeat;"></div>
-      <div id="bdsg" title="Design" style="background: url(&quot;/files/bitmaps/mrostdbar.png&quot;) -160px 0px no-repeat;"></div>
-      <div id="bfav" title="Favorites" style="background: url(&quot;/files/bitmaps/mrostdbar.png&quot;) -240px 0px no-repeat;"></div>
-      <div id="bhlp" title="Help" style="background: url(&quot;/files/bitmaps/mrostdbar.png&quot;) -144px 0px no-repeat;"></div>
+   <div id="thdr"></div>
+   <div id="cmdbar">
+      <div id="bbck"></div>
+      <div id="bout"></div>
+      <div id="bhom"></div>
+      <div id="bfrw"></div>
+      <div id="bnwa"></div>
+      <div id="bdsg"></div>
+      <div id="bfav"></div>
+      <div id="bhlp"></div>
    </div>
    <div id="dtree" style="display:none;width:200px;">
       <ul id="tree0" class="mrotree" style="width:480px;"></ul>
-      <hr>
+      <hr />
       <ul id="tree1" class="mrotree" style="width:480px;"></ul>
    </div>
    <div id="tbox"></div>
-   <div id="dform"><title>S050</title><form id="theform"><div style="position: absolute;    top: 32%;    left: 45%;    margin-top: -50px;    margin-left: -90px;    width: 240px;    height: 170px;"><button class="blue" onclick="window.location.href = window.location.origin + window.location.pathname + &#39;?e=3&#39;; return false;">As Customer</button><button class="blue" onclick="window.location.href = window.location.origin + window.location.pathname + &#39;?e=1&#39;; return false;">Entrepreneur</button><button class="blue" onclick="dispatch(&#39;create_account&#39;); return false;">Create Account</button><button class="blue" onclick="window.location.href = window.location.origin + window.location.pathname + &#39;?e=2&#39;; return false;">Administration</button></div></form>
-   <style type="text/css">
-          .svg-wrapper {  height: 60px;  width: 320px;	margin: 0 auto;  position: relative;  left: -46px;  transform: translateY(-50%); top:27px;}
-          .shape {  fill: transparent;  stroke-dasharray: 140 540;  stroke-dashoffset: -474;  stroke-width: 8px;  stroke: #7090B0;}
-          .text {  color: #fff;  font-family: 'verdana';  font-size: 22px;  letter-spacing: 8px;  line-height: 32px;  position: relative;  top: -48px;  text-align:center;}@keyframes draw {  0% {    stroke-dasharray: 140 540;    stroke-dashoffset: -474;    stroke-width: 8px;  }  100% {    stroke-dasharray: 760;    stroke-dashoffset: 0;    stroke-width: 2px;  }}
-          .svg-wrapper:hover .shape {  -webkit-animation: 0.5s draw linear forwards;  animation: 0.5s draw linear forwards;}</style><style type="text/css">
-          button {    color: #444444;    background: #F3F3F3;    border: 1px #DADADA solid;    
-                      padding: 5px 10px;    border-radius: 2px;    font-family: monospace;    font-weight: bold;   
-                       font-size: 9pt;    outline: none;
-                      }
-          button:hover {    border: 1px #C6C6C6 solid;    box-shadow: 1px 1px 1px #EAEAEA;    color: #333333;    background: #F7F7F7;}
-          button:active {    box-shadow: inset 1px 1px 1px #DFDFDF;   }/* Blue button as seen on translate.google.com*/
-          button.blue {    color: white;    background: #80A0C0;    border: 1px #80A0C0 solid;    box-shadow: inset 0 1px 0 #80B0FB;          
-             display: grid;
-             margin-left: 4.1em;
-             width: 19em;
-             margin-bottom: 1em;
-             height: 3em;          
-          }
-          button.blue:hover {    border: 1px #2F5BB7 solid;    box-shadow: 0 1px 1px #EAEAEA, inset 0 1px 0 #5A94F1;    background: #3F83F1;}
-          button.blue:active {    box-shadow: inset 0 2px 5px #2370FE;   }</style></div>
-   
-
-
-   
+   <div id="dform"></div>
    <div id="foot">
-      <input id="statusbar" size="200" maxlength="200" tabindex="-1" disabled="disabled" readonly="" style="background-color: #e1e1e2; color: rgb(255, 255, 255);">
-      <input id="fbia" size="8" tabindex="-1" disabled="disabled" readonly="">
-      <input id="fbjb" size="5" value="   Job" tabindex="-1" disabled="disabled" readonly="">
+      <input id="statusbar" size="200" maxlength="200" tabindex="-1" disabled="disabled" readonly>
+      <input id="fbia" size="8" tabindex="-1" disabled="disabled" readonly>
+      <input id="fbjb" size="5" value="   Job" tabindex="-1" disabled="disabled" readonly>
       <input type="checkbox" id="exjb">
-      <input id="fbos" size="5" value="   Support" tabindex="-1" disabled="disabled" readonly="">
+      <input id="fbos" size="5" value="   Support" tabindex="-1" disabled="disabled" readonly>
       <input type="checkbox" id="onsu">
-      <input id="fbin" size="8" tabindex="-1" readonly="">
-      <input id="fusr" size="8" tabindex="-1" readonly="">
-      <input id="fbid" size="3" tabindex="-1" readonly="">
-      <input id="fbic" size="16" tabindex="-1" readonly="">
-      <input id="fbix" size="3" tabindex="-1" readonly="">
-      <input id="fbil" size="2" tabindex="-1" readonly="">
-      <div id="guiberr" title="Show error info" style="background: url(&quot;/files/bitmaps/mrostdbar.png&quot;) -176px 0px no-repeat; display: none;"></div>
-      <div id="guibwrn" title="" style="background: url(&quot;/files/bitmaps/mrostdbar.png&quot;) -192px 0px no-repeat; display: none;"></div>
-      <div id="btsk" title="Tasks" style="background: url(&quot;/files/bitmaps/mrostdbar.png&quot;) -224px 0px no-repeat;"></div>
-      <div id="bsct" title="Shortcut" style="background: url(&quot;/files/bitmaps/mrostdbar.png&quot;) -128px 0px no-repeat;"></div>
-      <div id="bfnd" title="Easy access" style="background: url(&quot;/files/bitmaps/mrostdbar.png&quot;) -96px 0px no-repeat;"></div>
-      <div id="binf" title="Show session info" style="background: url(&quot;/files/bitmaps/mrostdbar.png&quot;) -208px 0px no-repeat;"></div>
+      <input id="fbin" size="8" tabindex="-1" readonly>
+      <input id="fusr" size="8" tabindex="-1" readonly>
+      <input id="fbid" size="3" tabindex="-1" readonly>
+      <input id="fbic" size="16" tabindex="-1" readonly>
+      <input id="fbix" size="3" tabindex="-1" readonly>
+      <input id="fbil" size="2" tabindex="-1" readonly>
+      <div id="guiberr"></div>
+      <div id="guibwrn"></div>
+      <div id="btsk"></div>
+      <div id="bsct"></div>
+      <div id="bfnd"></div>
+      <div id="binf"></div>
    </div>
-   <div id="prof" style="display:none;"></div>
-   <div id="contact" style="">
-      <center><a>contact: pacific@coromuel.mx</a></center>
+   <div id="prof" style="display:none;"></div><div id="contact" style="">
+      <center><a>contact:MIKE_pacific@coromuel.mx</a></center>
    </div>
-   <script type="text/javascript" src="./francio_files/core.js.download"></script>
-
-<img id="waiting" src="./francio_files/progress_bar2.gif" style="display: none;"><img id="photo" src="./francio_files/company.png"><style type="text/css">/*#guibmin{position:absolute;left:0px;top:0px;cursor:pointer;border:none;width:16px;height:15px;outline: none;} 
-#guibmax{position:absolute;left:16px;top:0px;cursor:pointer;border:none;width:16px;height:15px;outline: none;} 
-#guibcls{position:absolute;left:32px;top:0px;cursor:pointer;border:none;width:16px;height:15px;outline: none;}*/
-#tit{
-  text-align:right;
-  position:absolute;
-  top:-5px;
-  right:25px;
-}
-#usrid{
-  text-align: right;
-  position: absolute;
-  top: 22px;
-  right: 0px;
-}
-#sess{
-  text-align:right;
-  position:absolute;
-  top:40px;
-  right:0px;
-}
-#cmdbar{position:absolute;right:164px;top:95px;}
-#bhis{position:absolute;left:260px;top:55px;width:16px;height:16px;}
-#tbox{
-  position: absolute;
-  top: 120px;
-  right: 10px;
-}
-#contact{
-  position:absolute;
-  left:10px;
-  bottom:102px;
-  height:0px;
-  width:100%;
-}
-#waiting{
-	position:absolute;
-	top:57px;
-	left:114px;
-	width:146px;
-	height:12px;
-} 
-/*toolbar*/
-#bbck,#bout,#bhom,#bfrw,#bnwa,#bdsg,#bfav,#bhlp{
-  position:absolute;
-  top:0px;
-  width:16px;
-  height:16px;
-  outline: none;
-  border:none;
-  cursor:pointer;
-}
-#bbck{left:8px}
-#bout{left:24px}
-#bhom{left:40px;}
-#bfrw{left:56px;}
-#bnwa{left:76px;}
-#bdsg{left:96px;}
-#bfav{left:116px;}
-#bhlp{left:136px;}
-/*footer*/
-#btsk{position:absolute;right:60px;top:2px;width:16px;height:16px;cursor:pointer;}
-#bsct{position:absolute;right:40px;top:2px;width:16px;height:16px;cursor:pointer;}
-#bfnd{position:absolute;right:20px;top:2px;width:16px;height:16px;cursor:pointer;}
-#binf{position:absolute;right:0px;top:2px;width:16px;height:16px;cursor:pointer;}
-#fbia{left:0px;width:100%;border-radius:4px 0px 0px 4px;}
-#fbjb{left:0px;width:42px;}
-#exjb{left:1px;}
-#fbos{left:47px;width:66px;}
-#onsu{left:48px;}
-#fbin{right:208px;width:34px;}
-#fusr{right:150px;width:54px;}
-#fbid{right:122px;width:22px;}
-#fbic{right:42px;width:74px;}
-#fbix{right:14px;width:22px;}
-#fbil{right:-4px;width:12px;border-radius:0px 4px 4px 0px;}
-#drag{
-  position:absolute;
-  left:223px;
-  top:162px;
-  bottom:40px;
-  width:8px;
-  cursor:w-resize;
-}
-#dtree{
-  padding:5px 10px;
-  overflow-y:scroll;
-  border-style:none;
-  position:absolute;
-  top:150px;
-  bottom:70px;
-  left:5px;
-  width:200px;
-  border-radius:2px;
-}
-
-#prof{
-	font-family:Arial;
-	box-shadow: 4px 6px 8px #888888;
-	border-radius:4px;
-	transition: opacity .13s linear;
-	position: absolute;
-	width:400px;
-	height:250px;
-	background-color:#EEEEEE;
-	color:#000000;
-	font-size:12px;
-}</style><style type="text/css">#profhbg{width:400px;height:120px;border-radius:4px 4px 0px 0px;}#profhim{position:absolute;top:80px;left:10px;width:90px;height:98px;border-radius:4px;border-width:10px;border:solid;border-color:#DDDDDD;}#profb{font-size:12px;}#proff{border:1px solid #AAAAAA;width:399px;height:35px;background-color:rgb(220,220,202);font-size:10px;}.pb{position:relative;left:120px;margin:6px;}.pf{position:relative;top:10px;}</style></body></html>
+   <script type="text/javascript" src="../web/core.js"></script>
+</body>
+</html>
